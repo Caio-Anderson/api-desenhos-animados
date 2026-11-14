@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arquivo Interdimensional – Rick and Morty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="portal" aria-hidden="true"></div>
+    <div class="hero-text">
+      <h1>Arquivo Interdimensional</h1>
+      <p>Fichas de personagens de Rick and Morty, carregadas ao vivo da API pública.</p>
+      <p class="total" id="total" aria-live="polite">Conectando à API…</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Filtros">
+      <label class="field">Buscar por nome
+        <input type="search" id="busca" placeholder="Ex.: Rick, Morty, Summer">
+      </label>
+      <label class="field">Status
+        <select id="status">
+          <option value="">Todos</option>
+          <option value="alive">Vivo</option>
+          <option value="dead">Morto</option>
+          <option value="unknown">Desconhecido</option>
+        </select>
+      </label>
+      <button type="button" id="btn-favoritos" aria-pressed="false">Ver só favoritos</button>
+    </section>
+
+    <p class="msg" id="mensagem" role="status"></p>
+    <section class="grid" id="cards" aria-label="Personagens"></section>
+
+    <nav class="paginacao" aria-label="Paginação">
+      <button type="button" id="anterior">Anterior</button>
+      <span id="pagina">Página 1</span>
+      <button type="button" id="proxima">Próxima</button>
+    </nav>
+  </main>
+
+  <footer>Projeto acadêmico · Dados: <a href="https://rickandmortyapi.com/" target="_blank" rel="noopener">rickandmortyapi.com</a></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
